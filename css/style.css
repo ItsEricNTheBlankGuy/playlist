@@ -1,0 +1,15 @@
+.title {
+  border: black solid 10px;
+}
+.wholeList {
+  list-style: none;
+
+}
+.individual {
+  display: flex;
+  justify-content: space-around;
+  border: gray solid 5px;
+}
+.songInfo {
+  border: navy solid 3px;
+}
