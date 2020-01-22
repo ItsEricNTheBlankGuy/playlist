@@ -1,15 +1,72 @@
-.title {
-  border: black solid 10px;
+html, body, .layout {
+  height: 100%;
+  margin: 0%;
 }
-.wholeList {
-  list-style: none;
-
+.layout {
+  display: flex;
+}
+.rightPanel {
+  width: 75%;
+}
+.playlistList{
+  border-right: white solid 2px;
+  width: 25%;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.playlistList > h1 {
+  color: white;
+}
+.playlistList > div {
+  border-top: white solid 2px;
+  color: white;
+  border-bottom: white solid 2px;
+  padding: 20px;
+}
+.intro {
+  height: 20%;
+  color: white;
+  background: black;
+  border-bottom: white solid 1px;
+  display: flex;
+  justify-content: center;
+}
+.intro > h1 {
+  font-size: 50px;
+  margin-top: 5%;
+}
+.search {
+  border-bottom: white solid 1px;
+  height: 20%;
+  background: black;
+  text-align: center;
+  
+}
+.search > button {
+  margin-top: 10px;
+}
+.search > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.search > div > input {
+  height: 20px;
+}
+.songList {
+  background: black;
+  height: 60%;
 }
 .individual {
   display: flex;
-  justify-content: space-around;
-  border: gray solid 5px;
+  border-top: white solid 1px;
+  border-bottom: white solid 1px;
 }
 .songInfo {
   border: navy solid 3px;
+  color: white;
+  flex: 1
 }
