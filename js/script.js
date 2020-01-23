@@ -26,12 +26,27 @@ $(".playAdd").click(function(){
   $("body").append(`
   <script>
     let ${PlayName} = [["Somebody That I Used To Know", "Gotye", "https://www.youtube.com/watch?v=8UVNT4wvIGY", "s"]]; 
+    $(".search").append("<button class='stuff " + "${ButtonName}" + "'>" + "Add" + "</button>");
+    $(".${ButtonName}").hide();
+
+    $(".${ButtonName}").click(function() {
+      var addition = [];
+      var title = $("#enterSong").val();
+      var author = $("#enterName").val();
+      var ytlink = $("#enterMusic").val();
+      var imgUrl = $("#enterImg").val();
+      addition.push(title, author, ytlink, imgUrl);
+      ${PlayName}.push(addition);
+      $(".songList").append("<div class='individual'><button><a href='" + addition[2] + "' target='_blank'>Play</a></button><div class='songInfo'>" + addition[0] + "</div><div class='songInfo'>" + addition[1] + "</div></div>");
+    });
+
     $(".${PlayName}").click(function(){
       $(".stuff").hide();
-      $(".search").append("<button class='stuff " + "${ButtonName}" + "'>" + "Add" + "</button>");
+      $(".${ButtonName}").show();
       $(".songList").empty(); 
       ${PlayName}.forEach(function(song){
         $(".songList").append("<div class='individual'><button><a href='" + song[2] + "' target='_blank'>Play</a></button><div class='songInfo'>" + song[0] + "</div><div class='songInfo'>" + song[1] + "</div></div>");
       });
     });
   </script>`);
+});
